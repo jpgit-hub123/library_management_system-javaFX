@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="532.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Dashboard.DashBoardController">
+<AnchorPane prefHeight="532.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Dashboard.DashBoardPageController">
    <children>
       <BorderPane prefHeight="551.0" prefWidth="724.0">
          <top>
