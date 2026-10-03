@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Add_Member.AddMemberPageController">
    <children>
       <HBox prefHeight="50.0" prefWidth="600.0">
@@ -32,32 +31,32 @@
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="252.0" layoutY="22.0" prefHeight="26.0" prefWidth="284.0" />
+                  <TextField fx:id="txtMemberId" layoutX="252.0" layoutY="22.0" prefHeight="26.0" prefWidth="284.0" />
                   <Label layoutX="95.0" layoutY="75.0" text="Full Name:" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="252.0" layoutY="73.0" prefHeight="26.0" prefWidth="284.0" />
+                  <TextField fx:id="txtFullName" layoutX="252.0" layoutY="73.0" prefHeight="26.0" prefWidth="284.0" />
                   <Label layoutX="93.0" layoutY="124.0" text="Email:" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="252.0" layoutY="122.0" prefHeight="26.0" prefWidth="284.0" />
+                  <TextField fx:id="txtEmail" layoutX="252.0" layoutY="122.0" prefHeight="26.0" prefWidth="284.0" />
                   <Label layoutX="93.0" layoutY="171.0" text="Phone Number:" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="252.0" layoutY="169.0" prefHeight="26.0" prefWidth="284.0" />
+                  <TextField fx:id="txtPhoneNumber" layoutX="252.0" layoutY="169.0" prefHeight="26.0" prefWidth="284.0" />
                   <Label layoutX="93.0" layoutY="221.0" text="Address:" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="252.0" layoutY="219.0" prefHeight="26.0" prefWidth="284.0" />
-                  <Button layoutX="361.0" layoutY="281.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="174.0" style="-fx-background-color: Blue;" text="Register" textFill="WHITE">
+                  <TextField fx:id="txtAddress" layoutX="252.0" layoutY="219.0" prefHeight="26.0" prefWidth="284.0" />
+                  <Button fx:id="btnRegister" layoutX="361.0" layoutY="281.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="34.0" prefWidth="174.0" style="-fx-background-color: Blue;" text="Register" textFill="WHITE">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>

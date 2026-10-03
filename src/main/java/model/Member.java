@@ -7,13 +7,15 @@ public class Member {
     private String email;
     private String phoneNumber;
     private String address;
+    private String password;
 
-    public Member(String memberID, String fullName, String email, String phoneNumber, String address) {
+    public Member(String memberID, String fullName, String email, String phoneNumber, String address, String password) {
         this.memberID = memberID;
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.password = password;
     }
 
     public String getMemberID() {
@@ -34,6 +36,10 @@ public class Member {
 
     public String getAddress() {
         return address;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setMemberID(String memberID) {

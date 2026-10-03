@@ -19,7 +19,7 @@
    <children>
       <BorderPane prefHeight="551.0" prefWidth="724.0">
          <top>
-            <HBox prefHeight="94.0" prefWidth="771.0" style="-fx-background-color: #ADE8F4;" BorderPane.alignment="CENTER">
+            <HBox prefHeight="94.0" prefWidth="724.0" style="-fx-background-color: #ADE8F4;" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="106.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
@@ -39,10 +39,10 @@
                         <Image url="@../images/notification.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="85.0" top="35.0" />
+                        <Insets left="65.0" top="35.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="50.0" text="User" textAlignment="CENTER">
+                  <Label fx:id="userLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="74.0" text="User" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
@@ -52,7 +52,7 @@
                   </Label>
                   <ImageView fitHeight="50.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
-                        <Insets left="10.0" top="35.0" />
+                        <Insets left="30.0" top="35.0" />
                      </HBox.margin>
                      <image>
                         <Image url="@../images/user.png" />
@@ -61,28 +61,8 @@
                </children></HBox>
          </top>
          <left>
-            <VBox prefHeight="451.0" prefWidth="195.0" style="-fx-background-color: #ADE8F4;" BorderPane.alignment="CENTER">
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="195.0" style="-fx-background-color: #ADE8F4;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox prefHeight="75.0" prefWidth="195.0">
-                     <children>
-                        <ImageView fitHeight="43.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <HBox.margin>
-                              <Insets left="15.0" top="15.0" />
-                           </HBox.margin>
-                           <image>
-                              <Image url="@../images/dashboard.png" />
-                           </image>
-                        </ImageView>
-                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: Blue;" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
-                           <HBox.margin>
-                              <Insets left="15.0" top="20.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="Arial Black" size="12.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
                   <HBox prefHeight="75.0" prefWidth="195.0">
                      <children>
                         <ImageView fitHeight="43.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -93,7 +73,7 @@
                               <Insets left="15.0" top="21.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: blue;" text="Books" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnBook" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnBookOnAction" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: blue;" text="Books" textAlignment="CENTER" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="15.0" top="20.0" />
                            </HBox.margin>
@@ -113,7 +93,7 @@
                               <Insets left="15.0" top="22.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: blue;" text="Members" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnMember" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnMemberOnAction" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: blue;" text="Members" textAlignment="CENTER" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="15.0" top="20.0" />
                            </HBox.margin>
@@ -133,7 +113,7 @@
                               <Insets left="16.0" top="18.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: blue;" text="Borrow/Return" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnBorrowReturn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnBorrowReturnOnAction" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: blue;" text="Borrow/Return" textAlignment="CENTER" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="15.0" top="23.0" />
                            </HBox.margin>
@@ -173,7 +153,7 @@
                               <Insets left="16.0" top="18.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: blue;" text="Settings" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnLogOut" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: blue;" text="Log out" textAlignment="CENTER" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="14.0" top="21.0" />
                            </HBox.margin>
@@ -187,77 +167,77 @@
             </VBox>
          </left>
          <center>
-            <GridPane prefHeight="457.0" prefWidth="491.0" BorderPane.alignment="CENTER">
+            <GridPane prefHeight="390.0" prefWidth="529.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.7999633789062" minWidth="-Infinity" prefWidth="488.7999633789062" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints maxHeight="223.59998168945313" minHeight="10.0" prefHeight="186.00000610351563" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="277.20001831054685" minHeight="10.0" prefHeight="270.79999389648435" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="270.79999389648435" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="186.0" prefWidth="529.0" style="-fx-background-color: #CAF0F8;">
                      <children>
-                        <ImageView fitHeight="73.0" fitWidth="78.0" layoutX="49.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="41.0" fitWidth="63.0" layoutX="49.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/book.png" />
                            </image>
                         </ImageView>
-                        <Label contentDisplay="CENTER" layoutX="206.0" layoutY="40.0" prefHeight="34.0" prefWidth="83.0" text="Total Books" textAlignment="CENTER">
+                        <Label contentDisplay="CENTER" layoutX="152.0" layoutY="29.0" prefHeight="34.0" prefWidth="83.0" text="Total Books" textAlignment="CENTER">
                            <font>
                               <Font name="Arial Black" size="12.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="73.0" fitWidth="78.0" layoutX="49.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="39.0" fitWidth="56.0" layoutX="49.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/members.png" />
                            </image>
                         </ImageView>
-                        <Label contentDisplay="CENTER" layoutX="206.0" layoutY="120.0" prefHeight="34.0" prefWidth="102.0" text="Total Members" textAlignment="CENTER">
+                        <Label contentDisplay="CENTER" layoutX="152.0" layoutY="101.0" prefHeight="34.0" prefWidth="102.0" text="Total Members" textAlignment="CENTER">
                            <font>
                               <Font name="Arial Black" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="421.0" layoutY="37.0" prefHeight="39.0" prefWidth="26.0" text="0">
+                        <Label layoutX="372.0" layoutY="26.0" prefHeight="39.0" prefWidth="26.0" text="0">
                            <font>
                               <Font name="Arial Black" size="27.0" />
                            </font>
                         </Label>
-                        <Label layoutX="421.0" layoutY="118.0" prefHeight="39.0" prefWidth="26.0" text="0">
+                        <Label layoutX="372.0" layoutY="98.0" prefHeight="39.0" prefWidth="26.0" text="0">
                            <font>
                               <Font name="Arial Black" size="27.0" />
                            </font>
                         </Label>
                      </children>
                   </AnchorPane>
-                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="529.0" style="-fx-background-color: #CAF0F8;" GridPane.rowIndex="1">
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="254.0" prefWidth="530.0" style="-fx-background-color: #CAF0F8;" GridPane.rowIndex="1">
                      <children>
-                        <ImageView fitHeight="73.0" fitWidth="78.0" layoutX="50.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="50.0" fitWidth="57.0" layoutX="50.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/borrow.return.png" />
                            </image>
                         </ImageView>
-                        <Label contentDisplay="CENTER" layoutX="205.0" layoutY="35.0" prefHeight="34.0" prefWidth="181.0" text="Currently Borrowed Books" textAlignment="CENTER">
+                        <Label contentDisplay="CENTER" layoutX="151.0" layoutY="36.0" prefHeight="34.0" prefWidth="181.0" text="Currently Borrowed Books" textAlignment="CENTER">
                            <font>
                               <Font name="Arial Black" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="420.0" layoutY="33.0" prefHeight="39.0" prefWidth="26.0" text="0">
+                        <Label layoutX="376.0" layoutY="33.0" prefHeight="39.0" prefWidth="26.0" text="0">
                            <font>
                               <Font name="Arial Black" size="27.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="73.0" fitWidth="78.0" layoutX="47.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="73.0" fitWidth="57.0" layoutX="46.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/overdue.png" />
                            </image>
                         </ImageView>
-                        <Label contentDisplay="CENTER" layoutX="205.0" layoutY="140.0" prefHeight="34.0" prefWidth="105.0" text="Overdue Books" textAlignment="CENTER">
+                        <Label contentDisplay="CENTER" layoutX="151.0" layoutY="105.0" prefHeight="34.0" prefWidth="105.0" text="Overdue Books" textAlignment="CENTER">
                            <font>
                               <Font name="Arial Black" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="420.0" layoutY="138.0" prefHeight="39.0" prefWidth="26.0" text="0">
+                        <Label layoutX="376.0" layoutY="102.0" prefHeight="39.0" prefWidth="26.0" text="0">
                            <font>
                               <Font name="Arial Black" size="27.0" />
                            </font>
